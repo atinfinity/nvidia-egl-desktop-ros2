@@ -31,10 +31,17 @@ cd galactic
 docker build -t nvidia-egl-desktop-ros2:galactic .
 ```
 
+### ROS2 Humble
+
+```
+cd humble
+docker build -t nvidia-egl-desktop-ros2:humble .
+```
+
 ## Launch docker container
 
 Execute the command described below.  
-If you customize setting, please read <https://github.com/ehfd/docker-nvidia-egl-desktop/blob/main/README.md>.
+If you customize setting, please read <https://github.com/selkies-project/docker-nvidia-egl-desktop/blob/main/README.md>.
 
 ### ROS2 Foxy
 
@@ -46,6 +53,12 @@ docker run --gpus 0 -it --shm-size=1024m -e SIZEW=1920 -e SIZEH=1080 -e PASSWD=m
 
 ```
 docker run --gpus 0 -it --shm-size=1024m -e SIZEW=1920 -e SIZEH=1080 -e PASSWD=mypasswd -e BASIC_AUTH_PASSWORD=mypasswd -e NOVNC_ENABLE=true -p 6080:8080 nvidia-egl-desktop-ros2:galactic
+```
+
+### ROS2 Humble
+
+```
+docker run --gpus 0 -it --shm-size=1024m -e SIZEW=1920 -e SIZEH=1080 -e PASSWD=mypasswd -e BASIC_AUTH_PASSWORD=mypasswd -e NOVNC_ENABLE=true -p 6080:8080 nvidia-egl-desktop-ros2:humble
 ```
 
 ### Access KDE Plasma Desktop via web browser
