@@ -1,4 +1,4 @@
-FROM ghcr.io/ehfd/nvidia-egl-desktop:20.04
+FROM ghcr.io/selkies-project/nvidia-egl-desktop:20.04
 
 SHELL ["/bin/bash", "-c"]
 ENV DEBIAN_FRONTEND noninteractive
@@ -45,4 +45,3 @@ RUN echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc && \
 RUN echo "set bell-style none" >> ~/.inputrc
 
 RUN sudo rm /etc/apt/apt.conf.d/docker-clean
-
