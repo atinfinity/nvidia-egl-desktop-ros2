@@ -2,8 +2,8 @@
 
 ## Introduction
 
-This is a Dockerfile to use ROS2 on Xfce Desktop container with NVIDIA GPU.  
-This Dockerfile is based on [ehfd/docker-nvidia-egl-desktop](https://github.com/ehfd/docker-nvidia-egl-desktop).
+This is a Dockerfile to use ROS2 on KDE Plasma Desktop container with NVIDIA GPU.  
+This Dockerfile is based on [selkies-project/docker-nvidia-egl-desktop](https://github.com/selkies-project/docker-nvidia-egl-desktop).
 
 ![](nvidia-egl-desktop-ros2-screenshot.png)
 
@@ -48,10 +48,10 @@ docker run --gpus 0 -it --shm-size=1024m -e SIZEW=1920 -e SIZEH=1080 -e PASSWD=m
 docker run --gpus 0 -it --shm-size=1024m -e SIZEW=1920 -e SIZEH=1080 -e PASSWD=mypasswd -e BASIC_AUTH_PASSWORD=mypasswd -e NOVNC_ENABLE=true -p 6080:8080 nvidia-egl-desktop-ros2:galactic
 ```
 
-### Access Xfce Desktop via web browser
+### Access KDE Plasma Desktop via web browser
 
 Browse <http://127.0.0.1:6080/>.  
 In this docker container, default account is `user`.  
 You can set password via `PASSWD` and `BASIC_AUTH_PASSWORD` when you execute `docker run`. The default password is `mypasswd`.  
 
-[^1]: <https://github.com/ehfd/docker-nvidia-egl-desktop/blob/main/README.md>
+[^1]: <https://github.com/selkies-project/docker-nvidia-egl-desktop/blob/main/README.md>
