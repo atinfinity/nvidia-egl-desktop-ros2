@@ -1,4 +1,4 @@
-FROM ghcr.io/selkies-project/nvidia-egl-desktop:22.04
+FROM ghcr.io/selkies-project/nvidia-egl-desktop:22.04-20240425164112
 
 SHELL ["/bin/bash", "-c"]
 ENV DEBIAN_FRONTEND noninteractive
