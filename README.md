@@ -7,13 +7,13 @@ This Dockerfile is based on [selkies-project/docker-nvidia-egl-desktop](https://
 
 ![](nvidia-egl-desktop-ros2-screenshot.png)
 
-If you are interested in ROS1 version, please check [atinfinity/nvidia-egl-desktop-ros](https://github.com/atinfinity/nvidia-egl-desktop-ros).
+If you are interested in ROS 1 version, please check [atinfinity/nvidia-egl-desktop-ros](https://github.com/atinfinity/nvidia-egl-desktop-ros).
 
 ## Requirements
 
 - NVIDIA graphics driver 450.80.02+ [^1]
 - Docker
-- nvidia-docker2
+- NVIDIA Container Toolkit
 
 ## Build docker image
 
@@ -52,8 +52,9 @@ If you customize setting, please read <https://github.com/selkies-project/docker
 
 ### ROS 2 Foxy
 
-In this docker container, default account is `user`.  
-You can set password via `PASSWD` and `BASIC_AUTH_PASSWORD` when you execute `docker run`. The default password is `mypasswd`.  
+> [!NOTE]
+> In this docker container, default account is `user`.  
+> You can set password via `PASSWD` and `BASIC_AUTH_PASSWORD` when you execute `docker run`. The default password is `mypasswd`.  
 
 ```bash
 docker run --gpus 1 -it --shm-size=1024m --pid=host -e SIZEW=1920 -e SIZEH=1080 -e PASSWD=mypasswd -e BASIC_AUTH_PASSWORD=mypasswd -e NOVNC_ENABLE=true -p 6080:8080 nvidia-egl-desktop-ros2:foxy
@@ -61,8 +62,9 @@ docker run --gpus 1 -it --shm-size=1024m --pid=host -e SIZEW=1920 -e SIZEH=1080 
 
 ### ROS 2 Galactic
 
-In this docker container, default account is `user`.  
-You can set password via `PASSWD` and `BASIC_AUTH_PASSWORD` when you execute `docker run`. The default password is `mypasswd`.  
+> [!NOTE]
+> In this docker container, default account is `user`.  
+> You can set password via `PASSWD` and `BASIC_AUTH_PASSWORD` when you execute `docker run`. The default password is `mypasswd`.  
 
 ```bash
 docker run --gpus 1 -it --shm-size=1024m --pid=host -e SIZEW=1920 -e SIZEH=1080 -e PASSWD=mypasswd -e BASIC_AUTH_PASSWORD=mypasswd -e NOVNC_ENABLE=true -p 6080:8080 nvidia-egl-desktop-ros2:galactic
@@ -70,8 +72,9 @@ docker run --gpus 1 -it --shm-size=1024m --pid=host -e SIZEW=1920 -e SIZEH=1080 
 
 ### ROS 2 Humble
 
-In this docker container, default account is `user`.  
-You can set password via `PASSWD` and `BASIC_AUTH_PASSWORD` when you execute `docker run`. The default password is `mypasswd`.  
+> [!NOTE]
+> In this docker container, default account is `user`.  
+> You can set password via `PASSWD` and `BASIC_AUTH_PASSWORD` when you execute `docker run`. The default password is `mypasswd`.  
 
 ```bash
 docker run --gpus 1 -it --shm-size=1024m --pid=host -e SIZEW=1920 -e SIZEH=1080 -e PASSWD=mypasswd -e BASIC_AUTH_PASSWORD=mypasswd -e NOVNC_ENABLE=true -p 6080:8080 nvidia-egl-desktop-ros2:humble
@@ -79,8 +82,9 @@ docker run --gpus 1 -it --shm-size=1024m --pid=host -e SIZEW=1920 -e SIZEH=1080 
 
 ### ROS 2 Jazzy
 
-In this docker container, default account is `ubuntu`.  
-You can set password via `PASSWD` and `SELKIES_BASIC_AUTH_PASSWORD` when you execute `docker run`. The default password is `mypasswd`.  
+> [!NOTE]
+> In this docker container, default account is `ubuntu`.  
+> You can set password via `PASSWD` and `SELKIES_BASIC_AUTH_PASSWORD` when you execute `docker run`. The default password is `mypasswd`.  
 
 ```bash
 docker run --gpus 1 -it --shm-size=1024m --pid=host -e DISPLAY_SIZEW=1920 -e DISPLAY_SIZEH=1080 -e PASSWD=mypasswd -e SELKIES_BASIC_AUTH_PASSWORD=mypasswd -e SELKIES_ENABLE_RESIZE=true -e KASMVNC_ENABLE=true -p 6080:8080 nvidia-egl-desktop-ros2:jazzy
